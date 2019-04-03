@@ -16,6 +16,7 @@
     font-family: Roboto;
     color: gray;
     text-indent: 20px;
+    margin-bottom: 15px;
 }
 
 .btnRobot {
@@ -28,4 +29,14 @@
     font-family: Roboto;
     color: #34495e;
     background-color:#e1b137;
+}
+
+.nbRound {
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-style: bold;
+    font-family: Roboto;
+    color: #34495e;
 }
