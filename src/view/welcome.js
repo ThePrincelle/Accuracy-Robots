@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button, Form } from 'react-bootstrap';
 import './welcome.css';
 
 class Welcome extends Component{
@@ -35,14 +36,27 @@ class Welcome extends Component{
         console.log(this.state.round);
     }
 
+    playGame = (e) => {
+        console.log("Go to game...")
+    }
+
      render() {
          return (
             <div className="welcome">
                 <h1 className="welcomeTitle">Accuracy Robots</h1>
-                <input className="inputRobot" type="text" placeholder="Entrez un nom de robot" value={this.state.name} onChange={(e) => this.nameOnChanged(e)}/>
-                <button className="btnRobot" type="submit" onClick={this.validateName}>Valider</button> <br/>
-                Nombre de tour <input className="nbRound" type="number" min="5" max="10" step="1" defaultValue="5" onChange={(e) => this.changeRound(e)}/>
-
+                
+                <Form.Group controlId="form">
+                    <Form.Label>Nom du robot</Form.Label>
+                    <Form.Control type="text" placeholder="Insérez ici le nom que vous souhaitez pour votre robot." value={this.state.name} onChange={(e) => this.nameOnChanged(e)} />
+                </Form.Group>
+                <Form.Group controlId="formBasicChecbox">
+                    <Form.Label>Nombre de tour(s)</Form.Label>
+                    <Form.Control type="number" min="5" max="10" step="1" defaultValue="5" onChange={(e) => this.changeRound(e)}/>
+                </Form.Group>
+                <Button variant="secondary" size="sm" block className="playButton" onClick={this.playGame}>
+                    Jouer
+                </Button>
+            
             </div>
          )
      }
