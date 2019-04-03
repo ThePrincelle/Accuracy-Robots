@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
-class Situation extends Component {
+export default class Situation extends Component {
   state = {
-    phrase: ""
+    title: this.props.defaultTitle || "Situation",
+    sentence: this.props.initialValue || ""
   }
 
   render() {
-    
+    return <>
+      <div>
+        <h2>{this.state.title}</h2>
+        <p>{this.state.sentence}</p>
+      </div>
+    </>
   }
 }
