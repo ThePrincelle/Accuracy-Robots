@@ -1,42 +1,22 @@
-
 .welcome {
     text-align: center;
+    background: rgb(0, 0, 0, 0.65);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 30px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1rem;
 }
 
 .welcomeTitle {
-    font-size: 100px;
+    color: white;
+    margin-bottom: 3rem;
 }
 
-.inputRobot {
-    width: 700px;
-    height: 40px;
-    border-radius: 22px;
-    font-size: 16px;
-    font-style: bold;
-    font-family: Roboto;
-    color: gray;
-    text-indent: 20px;
-    margin-bottom: 15px;
-}
-
-.btnRobot {
-    width: 80px;
-    height: 40px;
-    border-radius: 22px;
-    margin-left: 10px;
-    font-size: 16px;
-    font-style: bold;
-    font-family: Roboto;
-    color: #34495e;
-    background-color:#e1b137;
-}
-
-.nbRound {
-    width: 80px;
-    height: 40px;
-    margin-left: 10px;
-    font-size: 16px;
-    font-style: bold;
-    font-family: Roboto;
-    color: #34495e;
+.playButton {
+    margin-top: 3rem;
 }
