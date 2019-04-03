@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './question.css';
-import {Button, ButtonToolbar} from 'react-bootstrap';
+import { Button, Card, ButtonToolbar } from 'react-bootstrap';
 
 class Question extends Component {
 
@@ -8,20 +8,22 @@ class Question extends Component {
 	    super(props)
 
 	    this.state = {
-	        question: "This is a question"
+	        question: "A Question this is."
 	    }
-	}
+    }
+
 
   render() {
     return (
-      <div className="Question">
-        <h1>This is a question</h1>
-        <ButtonToolbar>
-            <Button variant="success" size="sm">Yes</Button>
-            <Button variant="danger" size="sm">No</Button>
-        </ButtonToolbar>
-        
-      </div>
+        <Card bg="light" style={{ width: '18rem' }}>
+            <Card.Body>
+                <h1>{this.state.question}</h1>
+                <ButtonToolbar>
+                    <Button variant="success" size="sm">Yes</Button>
+                    <Button variant="danger" size="sm">No</Button>
+                </ButtonToolbar>
+            </Card.Body>
+        </Card>
     );
   }
 }
