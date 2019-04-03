@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import './App.css';
 import Welcome from './view/welcome';
 import Question from './view/question';
 
@@ -14,12 +14,11 @@ function Main() {
 
 function AppRouter() {
   return (
-    <div>
     <Router>
         <Route path="/" exact component={Accueil} />
         <Route path="/game/" component={Main} />
+        <Route path="*" component={Accueil} />
     </Router>
-    </div>
   );
 }
 

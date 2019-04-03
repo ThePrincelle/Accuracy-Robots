@@ -15,7 +15,7 @@ var createStars = function () {
         var star_radius = random_number(0, 4);
         var star_duration = random_number(6, 16);
 
-        document.body.innerHTML += "<div className='star' class='star' id='etoile' style='top: " + star_top + "px; left: " + star_left + "px; width: " + star_radius + "px; height: " + star_radius + "px; " +
+        document.body.innerHTML += "<div className='star' class='star' style='top: " + star_top + "px; left: " + star_left + "px; width: " + star_radius + "px; height: " + star_radius + "px; " +
         "animation-name:" + star_rotation + "; animation-duration: " + star_duration + "s;'></div>";
     }
     console.log(rot);

@@ -37,7 +37,7 @@ class Welcome extends Component{
     }
 
     playGame = (e) => {
-        console.log("Go to game...")
+        console.log("Go to game...");
     }
 
      render() {
