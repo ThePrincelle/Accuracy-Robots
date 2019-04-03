@@ -1,0 +1,22 @@
+{
+    "r1" : ["oui", "non"],
+    "impactr1" : [-10,10],
+    "r2" : ["Je cours à sa rescouse", "Les voitures de nos jours sont dôtées d'assez d'intelligence pour s'arrêter au moindre obstacle"],
+    "impactr2" : [15,-20],
+    "r3" : ["Je viens tel un gentleman et je lui attrape", "Elle n'a qu\\u00e0 demander au vendeur de l'aider"],
+    "impactr3" : [10,-10],
+    "r4" : ["Je lui refais le visage !", "Je m'éloigne de lui"],
+    "impactr4" : [-20,15],
+    "r5" : ["Moi même, pas le temps de niaiser", "Le plus de passagers possible chef !"],
+    "impactr5" : [-25,30],
+    "r6" : ["Je le prends avec moi et je le tue loin des tirs", "Je le tue et je me sacrifie car je suis sous les tirs ennemis"],
+    "impactr6" : [5,10],
+    "r7" : ["oui", "non"],
+    "impactr7" : [15,-15],
+    "r8" : ["Je leur cours après et je les tacles avec mes 2 jambes comme je n'ai plus de bras", "Je vais au laboratoire, mes bras c'est plus important !"],
+    "impactr8" : [20,-15],
+    "r9" : ["oui", "non"],
+    "impactr9" : [30,-20],
+    "r10" : ["Je vais les faire", "Je veux me reposer"],
+    "impactr10" : [5,-10]
+}
