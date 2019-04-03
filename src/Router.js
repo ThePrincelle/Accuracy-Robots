@@ -15,7 +15,6 @@ function Main() {
 function AppRouter() {
   return (
     <div>
-    
     <Router>
         <Route path="/" exact component={Accueil} />
         <Route path="/game/" component={Main} />

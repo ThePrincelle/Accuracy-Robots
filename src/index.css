@@ -1,3 +1,8 @@
+
+html {
+  background: #041227;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +11,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    background: url('./images/space-stars-texture-sololos.jpg') repeat;
-    height: 100%;
-    overflow: hidden;
+  background: black;
+  height: 100%;
+  overflow: hidden;
+}
+
+.star {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 100%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: -100;
+}
+
+@keyframes move_right {
+  from {
+    transform: rotate(0deg) translateX(8px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(8px) rotate(-360deg);
+  }
+}
+
+@keyframes move_left {
+  from {
+    transform: rotate(0deg) translateX(8px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg) translateX(8px) rotate(360deg);
+  }
 }
 
 code {
