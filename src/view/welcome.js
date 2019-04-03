@@ -19,6 +19,7 @@ class Welcome extends Component{
     }
 
     validateName = (props) => {
+        // eslint-disable-next-line
         var newRobot = {
             name: this.state.name,
             round: this.state.round
