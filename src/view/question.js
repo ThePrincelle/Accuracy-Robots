@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './question.css';
-import { Button, Card, ButtonToolbar } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
 class Question extends Component {
 
@@ -12,20 +12,19 @@ class Question extends Component {
 	    }
     }
 
-
-  render() {
-    return (
-        <Card bg="light" style={{ width: '18rem' }}>
-            <Card.Body>
-                <h1>{this.state.question}</h1>
-                <ButtonToolbar>
-                    <Button variant="success" size="sm">Yes</Button>
-                    <Button variant="danger" size="sm">No</Button>
-                </ButtonToolbar>
-            </Card.Body>
-        </Card>
-    );
-  }
+    render() {
+        return (
+            <Card style={{ width: '20rem' }}>
+                <Card.Header as="h5">
+                    {this.state.question}
+                </Card.Header>
+                <Card.Body>
+                    <Button variant="success" size="sm" style={{ margin: '10px' }}>Yes</Button>
+                    <Button variant="danger" size="sm" style={{ margin: '10px' }}>No</Button>
+                </Card.Body>
+            </Card>
+        );
+    }
 }
 
 export default Question;
