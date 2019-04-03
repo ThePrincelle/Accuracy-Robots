@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Situation from "./SituationComponent"
 
 class Welcome extends Component {
 

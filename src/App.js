@@ -6,15 +6,12 @@ import Welcome from './view/welcome';
 import Question from './view/question';
 
 class App extends Component {
-
-
-
   render() {
     return (
       <div className="App">
-		<Container>
-			<Question/>
-		</Container>
+        <Container>
+          <Question/>
+        </Container>
       </div>
     );
   }
