@@ -1,0 +1,7 @@
+.cardMember {
+    transition: transform .2s;
+}
+
+.cardMember:hover {
+    transform: scale(1.12);
+}

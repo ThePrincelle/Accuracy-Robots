@@ -45,6 +45,7 @@ class Welcome extends Component{
 
      render() {
          return (
+            <>
             <div className="welcome">
                 <h1 className="welcomeTitle">Accuracy Robots</h1>
                 
@@ -52,15 +53,18 @@ class Welcome extends Component{
                     <Form.Label>Nom du robot</Form.Label>
                     <Form.Control type="text" placeholder="The Robot" value={this.state.name} onChange={(e) => this.nameOnChanged(e)} />
                 </Form.Group>
+
                 <Form.Group controlId="formBasicChecbox">
                     <Form.Label>Nombre de tour(s)</Form.Label>
                     <Form.Control type="number" min="5" max="10" step="1" defaultValue={this.state.round} onChange={(e) => this.changeRound(e)}/>
                 </Form.Group>
+
                 <Button variant="secondary" size="sm" block className="playButton" onClick={this.playGame}>
                     Jouer
                 </Button>
-            
             </div>
+            <Button size="sm" variant="secondary" style={{ marginLeft: '20px', marginBottom: '20px', position: 'absolute', left: '0', bottom: '0' }} href="/about">Crédits</Button>
+            </>
          )
      }
  }
