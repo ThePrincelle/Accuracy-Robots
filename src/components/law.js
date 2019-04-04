@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "react-sidebar";
 import {ListGroup, Button} from "react-bootstrap";
-import './css/law.css';
+import '../css/law.css';
 
 class Law extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class Law extends React.Component {
         <div>
             <b>Les lois d'Asimov</b>
             <div className="lawStyle">
-                <ListGroup className= "listGroup" variant="flush " >
+                <ListGroup className="listGroup" variant="flush">
                     <ListGroup.Item style={{backgroundColor: 'transparent'}}>
                         <h6>Loi 1</h6> 
                         Un robot ne peut blesser un être humain ni, par son inaction, permettre qu'un humain soit blessé.
