@@ -23,7 +23,7 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        let rand = Math.floor(Math.random() * this.state.questions.length);
+        //let rand = Math.floor(Math.random() * this.state.questions.length);
         this.setState(prevState => ({currentQuestion: prevState.currentQuestion+1}))
     }
 
@@ -136,13 +136,17 @@ export default class Game extends Component {
             let repComp = [];
             reponses.map((r) => {
                 repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
+                return r;
             })
             let question = <Question text={a.question} answers={repComp}/>
             this.setState((prevState) => ({
                 questions: [...prevState.questions, question]
             }))
-       })
-       this.updateCurrentQuestion()
+
+            return question;
+        })
+
+        this.updateCurrentQuestion()
     }
 
     render()
@@ -151,6 +155,7 @@ export default class Game extends Component {
         console.log(this.state.questions)
         console.log("tour : " +this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
 
+        // eslint-disable-next-line eqeqeq
         if(this.state.tourAct == this.state.nbTours && this.state.robotIntegrity > 0) 
         {
             main = this.endGame()
@@ -162,15 +167,17 @@ export default class Game extends Component {
         else
         {
             console.log(this.state.questions[this.state.currentQuestion])
+            console.log(this.state.currentQuestion)
             main = this.state.questions[this.state.currentQuestion];
         }
 
         console.log(main)
 
         console.log("curr question : " + this.state.currentQuestion)
+
         return (
             <>
-            <img src={imgRobot} alt="Image robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
+            <img src={imgRobot} alt="Robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
                     Tour : {this.state.tourAct} / {this.state.nbTours}
@@ -188,7 +195,8 @@ export default class Game extends Component {
                 </Card.Body>
             </Card>
             <Law/>
-            {main}
+
+            <div>{main}</div>
             
             </>
         )
