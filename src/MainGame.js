@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import JsonData from './data/questions2.json'
+import JsonData from './data/tableaux.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
 import Law from './components/law';
