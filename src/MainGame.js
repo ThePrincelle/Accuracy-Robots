@@ -204,7 +204,7 @@ export default class Game extends Component {
             <Law/> 
 
             <div>{main}</div>
-            <Button size="sm" style={{ marginLeft: '120px', marginBottom: '20px', position: 'absolute', left: '0', bottom: '0' }} href="/about">Crédits</Button>
+            <Button size="sm" style={{ marginRight: '20px', marginBottom: '20px', position: 'absolute', right: '0', bottom: '0' }} href="/about">Crédits</Button>
             </>
         )
     }

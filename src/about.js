@@ -7,7 +7,8 @@ export default class About extends Component {
         return (
             <>
             <Button size="sm" variant="danger" href="/">Retour à l'accueil</Button>
-            <div style={{padding:70}}>
+            <h1 style={{ textAlign: "center", color: "white" }}>Crédits</h1>
+            <div style={{padding:70, paddingTop: 30}}>
             <Row>
                 <Col>
                     <Card className="cardMember" style={{width: 250}}>
