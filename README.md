@@ -2,6 +2,8 @@
 
 **Étudiants** : *Thomas Eyermann, Maxime Princelle, Quentin Schaeffer, Jean-Thavorak Phe*
 
+Lien de l'application : [https://accuracyrobots.princelle.org]
+
 ## Partie théorique
 
 ### Objectif pédagogique général
@@ -58,8 +60,36 @@ Avant la conception même du jeu nous avons décidé de schématiser l'interface
 
 #### Ecran d'accueil
 Ecran permettant la personnalisation de son personnage avant une partie.
-![alt text](./ressources_readme/ecran_accueil.png)
+![schema ecran d'acceuil](./ressources_readme/ecran_accueil.png)
 
 #### Ecran de jeu
 Une partie sera intégralement jouée sur l'écran suivant affichant différents choix et conséquences durant le déroulement de la partie.
-![alt text](./ressources_readme/schema_jeu.png)
+![schema jeu](./ressources_readme/schema_jeu.png)
+
+### Interface en développement
+
+L'interface en développement à légerement changée pour afficher différentes informations supplémentaires comme les lois d'Asimov dans un menu déroulant.
+
+Les choix s'effectuant ainsi en cliquant sur des boutons de choix en dessous de chaque question.
+
+Interface de creation de robot et de parametrage d'une partie :
+![alt text](./ressources_readme/interface_connexion.png)
+
+Interface de jeu :
+![alt text](./ressources_readme/interface_jeu.png)
+
+Interface de jeu avec affichage du volet des lois d'Asimov :
+![alt text](./ressources_readme/affichage_volet_lois.png)
+
+### MCD
+Modele de donneés du jeu
+
+
+## Utilisation de l'app web
+
+### Installation en local
+L'application tourne sous ReactJS, pour lancer l'application en local sur vote PC vous pouvez vous référer au [README de ReactJS](./README_BOOTSTRAP.md).
+
+### Utilisation de l'app hébergée
+L'application est aussi hébergée sur un serveur web pour éviter d'avoir à l'installer.  
+Lien de l'application : [https://accuracyrobots.princelle.org]

@@ -3,7 +3,9 @@ import JsonData from './data/tableaux.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
 import Law from './components/law';
-import { Card, ProgressBar, Modal, Button } from 'react-bootstrap';
+import { Card, ProgressBar, Modal, Button} from 'react-bootstrap';
+import imgRobot from './images/robot.png';
+
 
 export default class Game extends Component {
     state = {
@@ -57,10 +59,6 @@ export default class Game extends Component {
         return this.finPartieModal("Vous avez perdu. Votre robot s'est auto-détruit !");
     }
 
-    goTo = (link) => {
-        document.location.href = link
-    }
-
     finPartieModal = (text) => {
         return (
             <Modal.Dialog>
@@ -71,8 +69,8 @@ export default class Game extends Component {
                 {text}
             </Modal.Body>
             <Modal.Footer>
-                <Button style={{ margin: "0px", marginRight: "5px"}} size="sm" block variant="danger">Quitter</Button>
-                <Button style={{ margin: "0px" }} size="sm" block variant="info">Rejouer</Button>
+                <Button style={{ margin: "0px", marginRight: "5px"}} size="sm" block variant="danger" href="/">Quitter</Button>
+                <Button style={{ margin: "0px" }} size="sm" block variant="info" href="/game">Rejouer</Button>
             </Modal.Footer>
             </Modal.Dialog>
         );
@@ -110,11 +108,27 @@ export default class Game extends Component {
         })
     }
 
+    readCookie = (name) => {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
     /**
      * Récupere toutes les questiosn dans le fichier JSON et les transforme en composants Questions / Answer
      */
     componentDidMount()
     {
+        this.setState({
+            nbTours: this.readCookie("tours"),
+            robotName: this.readCookie("name") || "The Robot"
+        });
+        
         JsonData.map((a) => {
             //réponses pour une question
             let reponses = a.reponses 
@@ -156,6 +170,7 @@ export default class Game extends Component {
         console.log("curr question : " + this.state.currentQuestion)
         return (
             <>
+            <img src={imgRobot} alt="Image robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
                     Tour : {this.state.tourAct} / {this.state.nbTours}
@@ -172,7 +187,6 @@ export default class Game extends Component {
                     />
                 </Card.Body>
             </Card>
-
             <Law/>
             {main}
             
