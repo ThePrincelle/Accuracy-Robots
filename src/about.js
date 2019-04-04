@@ -7,8 +7,8 @@ export default class About extends Component {
             <div style={{padding:200}}>
             <Row>
                 <Col>
-                    <Card style={{width: 200, height: 450}}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card style={{width: 200}}>
+                    <Card.Img variant="top" src="/images/eyermann.png" />
                     <Card.Body>
                         <Card.Title>Thomas Eyermann</Card.Title>
                         <Card.Text>
@@ -18,19 +18,19 @@ export default class About extends Component {
                     </Card>;
                 </Col>
                 <Col>
-                    <Card style={{width: 200, height: 450}}>
+                    <Card style={{width: 200}}>
                     <Card.Img variant="top" src="/images/maxime.jpg" />
                     <Card.Body>
                         <Card.Title>Maxime Princelle</Card.Title>
                         <Card.Text>
-                        
+                        Les meilleures choses qui arrivent dans le monde de l’entreprise ne sont pas le résultat du travail d’un seul homme. C’est le travail de toute une équipe.
                         </Card.Text>
                         <Button variant="primary" href="https://princelle.org/">En Savoir plus</Button>
                     </Card.Body>
                     </Card>;
                 </Col>
                 <Col>
-                    <Card style={{width: 200, height: 450}}>
+                    <Card style={{width: 200}}>
                     <Card.Img variant="top" src="/images/quentin.png" style={{height:200, width : 200}}/>
                     <Card.Body>
                         <Card.Title>Quentin Schaeffer</Card.Title>
@@ -42,7 +42,7 @@ export default class About extends Component {
                     </Card>;
                 </Col>
                 <Col>
-                    <Card style={{width: 200, height: 450}}>
+                    <Card style={{width: 200}}>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Card.Title>Jean Phé</Card.Title>
