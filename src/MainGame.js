@@ -23,7 +23,17 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        this.setState(prevState => ({currentQuestion: prevState.currentQuestion+1}))
+        this.removePeople(this.state.questions, this.state.currentQuestion);
+
+        let rand = Math.floor(Math.random() * this.state.questions.length);
+        this.setState(prevState => ({currentQuestion: rand}));
+    }
+
+    removePeople(array, index) {
+        if(index > -1){
+            array.splice(index,1);
+        }
+        console.log("Nouvelle liste des questions: ", this.state.questions)
     }
 
     /**
@@ -174,8 +184,7 @@ export default class Game extends Component {
         {
             console.log(this.state.questions[this.state.currentQuestion])
             console.log(this.state.currentQuestion)
-            let rand = Math.floor(Math.random() * this.state.questions.length);
-            main = this.state.questions[rand];
+            main = this.state.questions[this.state.currentQuestion];
         }
 
         console.log(main)
