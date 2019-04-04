@@ -9,7 +9,7 @@ export default class Game extends Component {
         nbTours: 10,
         tourAct: 0,
         questions: [],
-        currentQuestion: 0,
+        currentQuestion: -1,
 
         robotIntegrity: 100,
         robotName: "RobotName"
@@ -38,7 +38,7 @@ export default class Game extends Component {
             this.endGame();
         }
         this.updateIntegrity(valInteg);
-        this.updateCurrentQuestion();
+        this.updateCurrentQuestion()
     }
 
     /**
@@ -71,7 +71,7 @@ export default class Game extends Component {
             this.setState(prevState => ({
                 robotIntegrity: prevState.robotIntegrity+val
             }))
-        }   
+        }
     }
 
     /**
@@ -85,23 +85,23 @@ export default class Game extends Component {
             //tableau de composants Answer
             let repComp = [];
             reponses.map((r) => {
-                return repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
+                repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
             })
             let question = <Question text={a.question} answers={repComp}/>
             this.setState((prevState) => ({
                 questions: [...prevState.questions, question]
             }))
-            return 0;
-        })
-        this.nextTour(0)
+            this.updateCurrentQuestion()
+       })
     }
 
     render()
     {
         let main;
 
-        console.log(this.state.currentQuestion)
-        console.log(this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
+        console.log("current question : "+this.state.currentQuestion)
+        console.log(this.state.questions)
+        console.log("tour : " +this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
 
         if(this.state.tourAct === this.state.nbTours && this.state.robotIntegrity > 0) 
         {
@@ -116,7 +116,7 @@ export default class Game extends Component {
             main = this.state.questions[this.state.currentQuestion];
         }
 
-        console.log(this.state.questions)
+        console.log("question : " + this.state.currentQuestion)
         return (
             <>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
