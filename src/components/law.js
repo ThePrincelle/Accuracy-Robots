@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "react-sidebar";
 import {ListGroup, Button} from "react-bootstrap";
-import './css/law.css';
+import '../css/law.css';
 
 class Law extends React.Component {
   constructor(props) {

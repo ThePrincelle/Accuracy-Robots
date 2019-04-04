@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/question.css';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Row, Col } from 'react-bootstrap';
 import Law from './law';
 
 class Question extends Component {
@@ -21,8 +21,10 @@ class Question extends Component {
                     {this.state.question}
                 </Card.Header>
                 <Card.Body>
-                    <Button variant="success" size="sm" style={{ margin: '10px' }}>Yes</Button>
-                    <Button variant="danger" size="sm" style={{ margin: '10px' }}>No</Button>
+                    <Row>
+                        <Col><Button variant="success" size="sm" style={{ margin: '10px' }}>Yes</Button></Col>
+                        <Col><Button variant="danger" size="sm" style={{ margin: '10px' }}>No</Button></Col>
+                    </Row>
                 </Card.Body>
             </Card>
             <Law sidebarOpen='true'></Law>
