@@ -2,8 +2,6 @@
 
 **Étudiants** : *Thomas Eyermann, Maxime Princelle, Quentin Schaeffer, Jean-Thavorak Phe*
 
-Lien de l'application : [https://accuracyrobots.princelle.org]
-
 ## Partie théorique
 
 ### Objectif pédagogique général
@@ -93,4 +91,4 @@ L'application tourne sous ReactJS, pour lancer l'application en local sur vote P
 
 ### Utilisation de l'app hébergée
 L'application est aussi hébergée sur un serveur web pour éviter d'avoir à l'installer.  
-Lien de l'application : [https://accuracyrobots.princelle.org]
+[Lien de l'application](https://accuracyrobots.princelle.org)
