@@ -17,7 +17,6 @@ function AppRouter() {
     <Router>
         <Route path="/" exact component={Accueil} />
         <Route path="/game/" component={Main} />
-        <Route path="*" component={Accueil} />
     </Router>
   );
 }
