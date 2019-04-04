@@ -201,10 +201,10 @@ export default class Game extends Component {
                     />
                 </Card.Body>
             </Card>
-            <Law/>
+            <Law/> 
 
             <div>{main}</div>
-            
+            <Button size="sm" style={{ marginLeft: '120px', marginBottom: '20px', position: 'absolute', left: '0', bottom: '0' }} href="/about">Crédits</Button>
             </>
         )
     }
