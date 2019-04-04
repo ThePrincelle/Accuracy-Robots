@@ -10,9 +10,9 @@ import imgRobot from './images/robot.png';
 export default class Game extends Component {
     state = {
         nbTours: 10,
-        tourAct: 0,
+        tourAct: 1,
         questions: [],
-        currentQuestion: 0,
+        currentQuestion: -1,
 
         robotIntegrity: 100,
         progColor: "success",
@@ -23,8 +23,8 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        let rand = Math.floor(Math.random() * this.state.questions.length);
-        this.setState({currentQuestion: rand})
+        //let rand = Math.floor(Math.random() * this.state.questions.length);
+        this.setState(prevState => ({currentQuestion: prevState.currentQuestion+1}))
     }
 
     /**
@@ -42,7 +42,7 @@ export default class Game extends Component {
             this.endGame();
         }
         this.updateIntegrity(valInteg);
-        this.updateCurrentQuestion();
+        this.updateCurrentQuestion()
     }
 
     /**
@@ -135,25 +135,28 @@ export default class Game extends Component {
             //tableau de composants Answer
             let repComp = [];
             reponses.map((r) => {
-                return repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
+                repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
+                return r;
             })
             let question = <Question text={a.question} answers={repComp}/>
             this.setState((prevState) => ({
                 questions: [...prevState.questions, question]
             }))
-            return 0;
+
+            return question;
         })
-        this.nextTour(0)
+
+        this.updateCurrentQuestion()
     }
 
     render()
     {
         let main;
+        console.log(this.state.questions)
+        console.log("tour : " +this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
 
-        console.log(this.state.currentQuestion)
-        console.log(this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
-
-        if(this.state.tourAct === this.state.nbTours && this.state.robotIntegrity > 0) 
+        // eslint-disable-next-line eqeqeq
+        if(this.state.tourAct == this.state.nbTours && this.state.robotIntegrity > 0) 
         {
             main = this.endGame()
         }
@@ -163,13 +166,18 @@ export default class Game extends Component {
         }
         else
         {
+            console.log(this.state.questions[this.state.currentQuestion])
+            console.log(this.state.currentQuestion)
             main = this.state.questions[this.state.currentQuestion];
         }
 
-        console.log(this.state.questions)
+        console.log(main)
+
+        console.log("curr question : " + this.state.currentQuestion)
+
         return (
             <>
-            <img src={imgRobot} alt="Image robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
+            <img src={imgRobot} alt="Robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
                     Tour : {this.state.tourAct} / {this.state.nbTours}
@@ -187,7 +195,9 @@ export default class Game extends Component {
                 </Card.Body>
             </Card>
             <Law/>
-            {main}
+
+            <div>{main}</div>
+            
             </>
         )
     }
