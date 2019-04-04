@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 export default class Answer extends Component {
     state = {
@@ -13,6 +13,6 @@ export default class Answer extends Component {
 
     render()
     {
-        return <Col md="auto"><Button onClick={this.handleClick}>{this.state.text}</Button></Col>
+        return <Button style={{ paddingLeft: "10px", paddingRight: "10px", paddingBottom: "5px" }} size="sm" block onClick={this.handleClick}>{this.state.text}</Button>
     }
 }

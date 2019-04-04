@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import JsonData from './data/questions2.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
-import { Card } from 'react-bootstrap';
+import { Card, ProgressBar } from 'react-bootstrap';
 
 export default class Game extends Component {
     state = {
@@ -12,6 +12,7 @@ export default class Game extends Component {
         currentQuestion: 0,
 
         robotIntegrity: 100,
+        progColor: "success",
         robotName: "RobotName"
     }
 
@@ -59,19 +60,32 @@ export default class Game extends Component {
      * Met a jour l'intégrité du robot
      */
     updateIntegrity = (val) => {
-        if(this.state.robotIntegrity + val >= 100)
-        {
-            this.setState({robotIntegrity: 100});
+        let newVal
+        if (this.state.robotIntegrity + val >= 100) {
+            newVal = 100;
+        } else if (this.state.robotIntegrity + val <= 0) {
+            newVal = 0;
+        } else {
+            newVal = this.state.robotIntegrity + val;
         }
-        else if(this.state.robotIntegrity + val <= 0)
-        {
-            this.setState({robotIntegrity: 0});
+        this.setState({
+            robotIntegrity: newVal
+        });
+        this.updateColorIntegrity(newVal);
+    }
+
+    updateColorIntegrity = (val) => {
+        let color;
+        if (val <= 20){
+            color = "danger";
+        } else if (val <= 50) {
+            color = "warning";
+        } else {
+            color = "success";
         }
-        else{
-            this.setState(prevState => ({
-                robotIntegrity: prevState.robotIntegrity+val
-            }))
-        }   
+        this.setState({
+            progColor: color
+        })
     }
 
     /**
@@ -121,15 +135,19 @@ export default class Game extends Component {
             <>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
-                    Tours : {this.state.tourAct} / {this.state.nbTours}
+                    Tour : {this.state.tourAct} / {this.state.nbTours}
                 </Card.Header>
                 <Card.Body className="robot-infos">
                     <h5 style={{ marginBottom: '1em' }}>{this.state.robotName}</h5>
                     
                     Intégrité du robot :
-                    <div class="progress" style={{ marginTop: '1em', height: "2em" }}>
-                      <div class="progress-bar progress-bar-striped" role="progressbar" style={{ width: this.state.robotIntegrity + '%'}} aria-valuenow={this.state.robotIntegrity} aria-valuemin="0" aria-valuemax="100"><b>{this.state.robotIntegrity}%</b></div>
-                    </div>
+                    <ProgressBar animated 
+                        now={this.state.robotIntegrity} 
+                        variant={this.state.progColor} 
+                        label={<b>{this.state.robotIntegrity}%</b>} 
+                        style={{ marginTop: '1em', height: "2em" }} 
+                    />
+
                 </Card.Body>
             </Card>
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 export default class Question extends Component {
     state = {
@@ -28,9 +28,7 @@ export default class Question extends Component {
                     {this.state.text}
                 </Card.Body>
                 <Card.Footer className="answers">
-                    <Row className="justify-content-md-center">
-                        {ans}
-                    </Row>
+                    {ans}
                 </Card.Footer>
             </Card>
         )
