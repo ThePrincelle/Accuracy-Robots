@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import './welcome.css';
+import './css/welcome.css';
 
 class Welcome extends Component{
 

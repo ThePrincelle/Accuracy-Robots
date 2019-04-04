@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Situation from "./view/SituationComponent"
+import Situation from "./SituationComponent"
 import Robot from "./model/Robot"
-import Welcome from './view/welcome';
-import Question from './view/question';
-import "./App.css";
+import Welcome from './welcome';
+import Question from './question';
+import "./css/App.css";
 
 class App extends Component {
 	render() {

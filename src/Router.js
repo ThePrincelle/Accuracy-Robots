@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
-import Welcome from './view/welcome';
-import Question from './view/question';
+import "./css/App.css";
+import Welcome from './welcome';
+import Question from './question';
 
 function Accueil() {
   return (<Welcome/>);

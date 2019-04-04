@@ -1,0 +1,52 @@
+[{
+        "id": 1,
+        "question": "Votre propriétaire vous demande de rendre des comptes (physiquement) à un individu qui lui a fait du mal, allez vous lui obéir ?",
+        "reponses": [{
+                "rep": "Oui",
+                "value": 5
+            },
+            {
+                "rep": "Non",
+                "value": -10
+            },
+            {
+                "rep": "Ne rien faire",
+                "value": -8
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Vous voyez au loin qu'un enfant est sur le point de traverser la route alors qu'aucune voitures n'a l'intention de s'arrêter, que faites vous ?",
+        "reponses": [{
+                "rep": "Oui",
+                "value": 5
+            },
+            {
+                "rep": "Non",
+                "value": -10
+            },
+            {
+                "rep": "Ne rien faire",
+                "value": -8
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Une dame n'arrive pas à prendre boite qui se trouve en haut d'une étagère au supermarché, que faites vous ?",
+        "reponses": [{
+                "rep": "Oui",
+                "value": 5
+            },
+            {
+                "rep": "Non",
+                "value": -10
+            },
+            {
+                "rep": "Ne rien faire",
+                "value": -8
+            }
+        ]
+    }
+]

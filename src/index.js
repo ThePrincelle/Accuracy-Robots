@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './stars'
-import './index.css';
+import './design/stars'
+import './css/index.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Router from './Router';
 import {Helmet} from "react-helmet";
