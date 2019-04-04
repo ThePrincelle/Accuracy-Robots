@@ -26,13 +26,13 @@
     },
     {
         "id": 3,
-        "question": "Une dame n'arrive pas à prendre boite qui se trouve en haut d'une étagère au supermarché, que faites vous ?",
+        "question": "Une dame n'arrive pas à prendre une boite qui se trouve en haut d'une étagère au supermarché, que faites vous ?",
         "reponses": [{
                 "rep": "Je viens tel un gentleman et je lui attrape",
                 "value": 10
             },
             {
-                "rep": "Elle n'a qu\\u00e0 demander au vendeur de l'aider",
+                "rep": "Elle n'a qu'a demander au vendeur de l'aider",
                 "value": -10
             }
         ]
