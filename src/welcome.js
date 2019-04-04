@@ -9,7 +9,7 @@ class Welcome extends Component{
     
       this.state = {
          name: "",
-         round: 0
+         round: 5
       }
     }
 
@@ -37,6 +37,9 @@ class Welcome extends Component{
     }
 
     playGame = (e) => {
+        document.cookie = 'name=' + this.state.name +'; path=/'
+        document.cookie = 'tours=' + this.state.round + '; path=/'
+
         document.location.href = '/game'
     }
 
@@ -47,11 +50,11 @@ class Welcome extends Component{
                 
                 <Form.Group controlId="form">
                     <Form.Label>Nom du robot</Form.Label>
-                    <Form.Control type="text" placeholder="Insérez ici le nom que vous souhaitez pour votre robot." value={this.state.name} onChange={(e) => this.nameOnChanged(e)} />
+                    <Form.Control type="text" placeholder="The Robot" value={this.state.name} onChange={(e) => this.nameOnChanged(e)} />
                 </Form.Group>
                 <Form.Group controlId="formBasicChecbox">
                     <Form.Label>Nombre de tour(s)</Form.Label>
-                    <Form.Control type="number" min="5" max="10" step="1" defaultValue="5" onChange={(e) => this.changeRound(e)}/>
+                    <Form.Control type="number" min="5" max="10" step="1" defaultValue={this.state.round} onChange={(e) => this.changeRound(e)}/>
                 </Form.Group>
                 <Button variant="secondary" size="sm" block className="playButton" onClick={this.playGame}>
                     Jouer
