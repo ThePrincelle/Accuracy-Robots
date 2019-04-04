@@ -12,9 +12,9 @@ export default class About extends Component {
                     <Card.Body>
                         <Card.Title>Jean Phé</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Visez l'excellence.
                         </Card.Text>
+                        <Button variant="primary" href="https://www.linkedin.com/in/jean-thavorak-phe-a648b1174">En Savoir plus</Button>
                     </Card.Body>
                     </Card>;
                 </Col>

@@ -23,7 +23,6 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        //let rand = Math.floor(Math.random() * this.state.questions.length);
         this.setState(prevState => ({currentQuestion: prevState.currentQuestion+1}))
     }
 
@@ -175,7 +174,8 @@ export default class Game extends Component {
         {
             console.log(this.state.questions[this.state.currentQuestion])
             console.log(this.state.currentQuestion)
-            main = this.state.questions[this.state.currentQuestion];
+            let rand = Math.floor(Math.random() * this.state.questions.length);
+            main = this.state.questions[rand];
         }
 
         console.log(main)
