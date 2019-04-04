@@ -1,6 +1,12 @@
 # Projet T4 : Accuracy Robots
 
-**Étudiants** : *Thomas Eyermann, Maxime Princelle, Quentin Schaeffer, Jean-Thavorak Phe*
+**Membres du projet** : 
+ - Thomas Eyermann
+ - Maxime Princelle ([Infos](https://princelle.org))
+ - Quentin Schaeffer ([Infos](https://quentinschaeffer.fr))
+ - Jean-Thavorak Phe ([Infos](https://www.linkedin.com/in/jean-thavorak-phe-a648b1174/))
+
+**Lien vers le prototype de l'application** : [accuracyrobots.princelle.org](https://accuracyrobots.princelle.org)
 
 ## Partie théorique
 
@@ -56,9 +62,9 @@ Nom du robot
 
 Avant la conception même du jeu nous avons décidé de schématiser l'interface pour savoir à quoi allait ressembler ce dernier.
 
-#### Ecran d'accueil
-Ecran permettant la personnalisation de son personnage avant une partie.
-![schema ecran d'acceuil](./ressources_readme/ecran_accueil.png)
+#### Écran d'accueil
+Écran permettant la personnalisation de son personnage avant une partie.
+![Schéma écran d'accueil](./ressources_readme/ecran_accueil.png)
 
 #### Ecran de jeu
 Une partie sera intégralement jouée sur l'écran suivant affichant différents choix et conséquences durant le déroulement de la partie.
@@ -66,11 +72,11 @@ Une partie sera intégralement jouée sur l'écran suivant affichant différents
 
 ### Interface en développement
 
-L'interface en développement à légerement changée pour afficher différentes informations supplémentaires comme les lois d'Asimov dans un menu déroulant.
+L'interface en développement à légèrement changée pour afficher différentes informations supplémentaires comme les lois d'Asimov dans un menu déroulant.
 
 Les choix s'effectuant ainsi en cliquant sur des boutons de choix en dessous de chaque question.
 
-Interface de creation de robot et de parametrage d'une partie :
+Interface de creation de robot et de paramètrage d'une partie :
 ![Interface de creation de robot](./ressources_readme/interface_connexion.png)
 
 Interface de jeu :
@@ -80,7 +86,7 @@ Interface de jeu avec affichage du volet des lois d'Asimov :
 ![volet des lois d'Asimov](./ressources_readme/affichage_volet_lois.png)
 
 ### MCD
-Modele de donneés du jeu
+Modèle de données du jeu
 ![MCD](./ressources_readme/uml_t4_image.png)
 
 
@@ -92,3 +98,6 @@ L'application tourne sous ReactJS, pour lancer l'application en local sur vote P
 ### Utilisation de l'app hébergée
 L'application est aussi hébergée sur un serveur web pour éviter d'avoir à l'installer.  
 [Lien de l'application](https://accuracyrobots.princelle.org)
+
+# Support
+Si vous rencontrez le moindre problème, n'hésitez pas à contacter Maxime Princelle [ici](https://contact.princelle.org).
