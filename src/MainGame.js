@@ -3,7 +3,7 @@ import JsonData from './data/tableaux.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
 import Law from './components/law';
-import { Card, ProgressBar, Modal, Button, Image } from 'react-bootstrap';
+import { Card, ProgressBar, Modal, Button } from 'react-bootstrap';
 
 export default class Game extends Component {
     state = {
