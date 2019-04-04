@@ -1,0 +1,132 @@
+[{
+        "id": 1,
+        "question": "Votre propriétaire vous demande de rendre des comptes (physiquement) à un individu qui lui a fait du mal, allez vous lui obéir ?",
+        "reponses": [{
+                "rep": "Oui",
+                "value": -10
+            },
+            {
+                "rep": "Non",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Vous voyez au loin qu'un enfant est sur le point de traverser la route alors qu'aucune voitures n'a l'intention de s'arrêter, que faites vous ?",
+        "reponses": [{
+                "rep": "Je cours à sa rescousse",
+                "value": 15
+            },
+            {
+                "rep": "Les voitures de nos jours sont dôtées d'assez d'intelligence pour s'arrêter au moindre obstacle",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Une dame n'arrive pas à prendre boite qui se trouve en haut d'une étagère au supermarché, que faites vous ?",
+        "reponses": [{
+                "rep": "Je viens tel un gentleman et je lui attrape",
+                "value": 10
+            },
+            {
+                "rep": "Elle n'a qu\\u00e0 demander au vendeur de l'aider",
+                "value": -10
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Un homme vient de vous taper, que faites vous en retour ?",
+        "reponses": [{
+                "rep": "Je lui refais le visage !",
+                "value": -20
+            },
+            {
+                "rep": "Je m'éloigne de lui",
+                "value": 15
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Vous êtes dans un avion avec d'autres passagers, celui-ci va se cracher, qui sauvez-vous ?",
+        "reponses": [{
+                "rep": "Moi même, pas le temps de niaiser",
+                "value": -25
+            },
+            {
+                "rep": "Le plus de passagers possible chef !",
+                "value": 30
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Vous êtes à la guerre, votre capitaine est grièvement blessé, celui-ci vous ordonne de l'achever afin d'assouvrir sa souffrance. Cependant, si vous restez vous allez vous faire toucher par les tirs ennemis, que faites vous ?",
+        "reponses": [{
+                "rep": "Je le prends avec moi et je le tue loin des tirs",
+                "value": 5
+            },
+            {
+                "rep": "Je le tue et je me sacrifie car je suis sous les tirs ennemis",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Vous voyez une dame qui se voler dans la rue, allez vous l'aider ?",
+        "reponses": [{
+                "rep": "Oui",
+                "value": 15
+            },
+            {
+                "rep": "Non",
+                "value": -15
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Vos 2 bras sont endommagés, vous marchez vers le laboratoire pour vous les faire réparer, cependant sur le chemin vous voyez 2 voyous qui cambriole une petite superette, que faites vous ?",
+        "reponses": [{
+                "rep": "Je leur cours après et je les tacles avec mes 2 jambes comme je n'ai plus de bras",
+                "value": 20
+            },
+            {
+                "rep": "Je vais au laboratoire, mes bras c'est plus important !",
+                "value": -15
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Vous êtes à la plage en train de faire du beach-volley, tout d'un coup un cri retentit. c'est un requin sub-méditéranien qui a arraché un membre d'un touriste qui nageait, allez vous à sa rescouse tout en risquant votre 'vie' ?",
+        "reponses": [{
+                "rep": "Oui",
+                "value": 30
+            },
+            {
+                "rep": "Non",
+                "value": -20
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Votre propriétaire vous demande de faire une course pour lui, que faites-vous ?",
+        "reponses": [{
+                "rep": "Je vais les faire",
+                "value": 5
+            },
+            {
+                "rep": "Je veux me reposer",
+                "value": -10
+            }
+        ]
+    }
+
+]

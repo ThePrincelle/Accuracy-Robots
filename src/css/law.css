@@ -1,10 +1,5 @@
-.nbLaw {
-    font-weight: bold;
-}
-
 .listGroup {
     background-color: transparent;
     width: 35em;
     position: fixed;
-    border-color: white;
 }

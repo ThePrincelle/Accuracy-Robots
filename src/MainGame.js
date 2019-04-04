@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import JsonData from './data/questions2.json'
+import JsonData from './data/tableaux.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
-import { Card, ProgressBar } from 'react-bootstrap';
+import Law from './components/law';
+import { Card, ProgressBar, Modal, Button } from 'react-bootstrap';
 
 export default class Game extends Component {
     state = {
@@ -49,14 +50,36 @@ export default class Game extends Component {
      * Fin de la partie avec victoire
      */
     endGame = () => {
-        return (<h2>Fin de la partie, vous avez gagné</h2>)
+        return (
+            <Modal.Dialog>
+            <Modal.Header closeButton>
+                <Modal.Title>Fin de la partie</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>Vous avez gagné ! Félicitations !</p>
+            </Modal.Body>
+            </Modal.Dialog>
+        )
     }
 
     /**
      * Fin de la partie défaite
      */
     gameOver = () => {
-        return (<h2>Fin de la partie : Votre robot s'est autodétruit !</h2>)
+        return (
+            <Modal.Dialog>
+            <Modal.Header closeButton>
+                <Modal.Title>Fin de la partie</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>Vous avez perdu. Votre robot s'est auto-détruit !</p>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary">Close</Button>
+                <Button variant="primary">Save changes</Button>
+            </Modal.Footer>
+            </Modal.Dialog>
+        )
     }
 
     /**
@@ -153,6 +176,8 @@ export default class Game extends Component {
             </Card>
 
             {main}
+
+            <Law sidebarOpen='false'></Law>
             </>
         )
     }
