@@ -21,9 +21,8 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        console.log("lqsidjfoiqsjf")
         let rand = Math.floor(Math.random() * this.state.questions.length);
-        this.setState({currentQuestion: rand})
+        this.setState(prevState => ({currentQuestion: prevState.currentQuestion+1}))
     }
 
     /**
@@ -32,18 +31,16 @@ export default class Game extends Component {
     nextTour = (valInteg) => {
         if(this.state.tourAct < this.state.nbTours)
         {
-            let rand = Math.floor(Math.random() * this.state.questions.length);
             this.setState(prevState => ({
-                currentQuestion: rand,
                 tourAct: prevState.tourAct+1
             }));
-            //this.updateCurrentQuestion()
         }
         else
         {
             this.endGame();
         }
         this.updateIntegrity(valInteg);
+        this.updateCurrentQuestion()
     }
 
     /**
@@ -150,8 +147,11 @@ export default class Game extends Component {
         }
         else
         {
+            console.log(this.state.questions[this.state.currentQuestion])
             main = this.state.questions[this.state.currentQuestion];
         }
+
+        console.log(main)
 
         console.log("curr question : " + this.state.currentQuestion)
         return (
@@ -170,13 +170,12 @@ export default class Game extends Component {
                         label={<b>{this.state.robotIntegrity}%</b>} 
                         style={{ marginTop: '1em', height: "2em" }} 
                     />
-
                 </Card.Body>
             </Card>
 
             <Law/>
-
             {main}
+            
             </>
         )
     }
