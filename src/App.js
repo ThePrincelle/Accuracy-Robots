@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Situation from "./SituationComponent"
+import Situation from "./Components/SituationComponent"
 import Robot from "./model/Robot"
 import Welcome from './welcome';
-import Question from './question';
+import Question from './Components/question';
 import "./css/App.css";
 
 class App extends Component {

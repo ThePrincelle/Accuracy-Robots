@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/question.css';
+import '../css/question.css';
 import { Button, Card } from 'react-bootstrap';
 
 class Question extends Component {

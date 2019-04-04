@@ -42,7 +42,7 @@ class Welcome extends Component{
 
      render() {
          return (
-            <div className="welcome" style={{background: "rgb(0,0,0,0,.75)"}}>
+            <div className="welcome">
                 <h1 className="welcomeTitle">Accuracy Robots</h1>
                 
                 <Form.Group controlId="form">
