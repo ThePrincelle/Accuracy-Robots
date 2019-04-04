@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./css/App.css";
 import Welcome from './welcome';
-import Question from './question';
+import Game from './MainGame';
 
 function Accueil() {
   return (<Welcome/>);
 }
 
 function Main() {
-  return (<Question/>);
+  return (<Game/>);
 }
 
 function AppRouter() {

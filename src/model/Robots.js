@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Question from './QuestionComponent';
+import Question from '../Components/QuestionComponent';
 
 export default class Robot extends Component {
     state = {

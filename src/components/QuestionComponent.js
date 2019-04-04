@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card } from 'react-bootstrap';
 
 export default class Question extends Component {
     state = {
@@ -19,16 +20,17 @@ export default class Question extends Component {
         }
 
         return (
-            <>
-            <div className="question">
-                <h2>{this.state.title}</h2>
-                <p>{this.state.text}</p>
-            </div>
-
-            <div className="answers">
-                {ans}
-            </div>
-            </>
+            <Card className="question" style={{ width: '20rem' }}>
+                <Card.Header as="h5">
+                    {this.state.title}
+                </Card.Header>
+                <Card.Body style={{ textAlign: "justify" }}>
+                    {this.state.text}
+                </Card.Body>
+                <Card.Footer className="answers">
+                    {ans}
+                </Card.Footer>
+            </Card>
         )
     }
 }

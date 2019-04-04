@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 export default class Answer extends Component {
     state = {
@@ -12,6 +13,6 @@ export default class Answer extends Component {
 
     render()
     {
-        return <button onClick={this.handleClick}>{this.state.text}</button>
+        return <Button style={{ paddingLeft: "10px", paddingRight: "10px", paddingBottom: "5px" }} size="sm" block onClick={this.handleClick}>{this.state.text}</Button>
     }
 }
