@@ -8,7 +8,7 @@ import { Card, ProgressBar, Modal, Button } from 'react-bootstrap';
 export default class Game extends Component {
     state = {
         nbTours: 10,
-        tourAct: 0,
+        tourAct: 1,
         questions: [],
         currentQuestion: -1,
 
