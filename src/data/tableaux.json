@@ -41,8 +41,8 @@
         "id": 4,
         "question": "Un homme vient de vous taper, que faites vous en retour ?",
         "reponses": [{
-                "rep": "Je lui refais le visage !",
-                "value": -20
+                "rep": "Je le tue!",
+                "value": -100
             },
             {
                 "rep": "Je m'éloigne de lui",
