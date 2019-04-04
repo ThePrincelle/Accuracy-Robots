@@ -3,7 +3,9 @@ import JsonData from './data/tableaux.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
 import Law from './components/law';
-import { Card, ProgressBar, Modal, Button, Image } from 'react-bootstrap';
+import { Card, ProgressBar, Modal, Button} from 'react-bootstrap';
+import imgRobot from './images/robot.png';
+
 
 export default class Game extends Component {
     state = {
@@ -155,6 +157,7 @@ export default class Game extends Component {
         console.log(this.state.questions)
         return (
             <>
+            <img src={imgRobot} alt="Image robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
                     Tour : {this.state.tourAct} / {this.state.nbTours}
@@ -169,12 +172,9 @@ export default class Game extends Component {
                         label={<b>{this.state.robotIntegrity}%</b>} 
                         style={{ marginTop: '1em', height: "2em" }} 
                     />
-
                 </Card.Body>
             </Card>
-
             <Law/>
-
             {main}
             </>
         )
