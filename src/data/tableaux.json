@@ -104,7 +104,7 @@
     },
     {
         "id": 9,
-        "question": "Vous êtes à la plage en train de faire du beach-volley, tout d'un coup un cri retentit. c'est un requin sub-méditéranien qui a arraché un membre d'un touriste qui nageait, allez vous à sa rescouse tout en risquant votre 'vie' ?",
+        "question": "Vous êtes à la plage en train de faire du beach-volley, tout d'un coup un cri retentit. C'est un requin sub-méditéranien qui a arraché un membre d'un touriste qui nageait, allez vous à sa rescouss$e tout en risquant votre 'vie' ?",
         "reponses": [{
                 "rep": "Oui",
                 "value": 30
