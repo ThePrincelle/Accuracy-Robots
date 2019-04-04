@@ -3,6 +3,7 @@ import JsonData from './data/questions2.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
 import { Card, ProgressBar } from 'react-bootstrap';
+import Law from './law.js';
 
 export default class Game extends Component {
     state = {
@@ -150,7 +151,7 @@ export default class Game extends Component {
 
                 </Card.Body>
             </Card>
-
+            <Law></Law>
             {main}
             </>
         )
