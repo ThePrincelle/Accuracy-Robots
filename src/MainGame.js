@@ -124,8 +124,15 @@ export default class Game extends Component {
      */
     componentDidMount()
     {
+        let nbtours;
+        if(this.readCookie("tours")>10){
+            nbtours = 10;
+        }
+        else{
+            nbtours = this.readCookie("tours");
+        }
         this.setState({
-            nbTours: this.readCookie("tours"),
+            nbTours: nbtours,
             robotName: this.readCookie("name") || "The Robot"
         });
         
