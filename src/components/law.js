@@ -22,21 +22,21 @@ class Law extends React.Component {
         sidebar={
             <div className="lawStyle">
             <h5 style={{margin: '20px'}}>Les lois d'Asimov</h5>
-                <ListGroup className= "listGroup" variant="flush " >
-                    <ListGroup.Item style={{backgroundColor: 'transparent'}}>
-                        <h6>Loi 1</h6>
+                <ListGroup className= "listGroup" variant="flush">
+                    <ListGroup.Item style={{backgroundColor: 'transparent', textAlign: 'justify'}}>
+                        <h6 style={{textAlign: 'left'}}>Loi 1</h6>
                         Un robot ne peut blesser un être humain ni, par son inaction, permettre qu'un humain soit blessé.
                     </ListGroup.Item>
-                    <ListGroup.Item style={{backgroundColor: 'transparent'}}>
-                        <h6>Loi 2</h6>
+                    <ListGroup.Item style={{backgroundColor: 'transparent', textAlign: 'justify'}}>
+                        <h6 style={{textAlign: 'left'}}>Loi 2</h6>
                         Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi.
                     </ListGroup.Item>
-                    <ListGroup.Item style={{backgroundColor: 'transparent'}}>
-                        <h6>Loi 3</h6>
+                    <ListGroup.Item style={{backgroundColor: 'transparent', textAlign: 'justify'}}>
+                        <h6 style={{textAlign: 'left'}}>Loi 3</h6>
                         Un robot doit protéger sa propre existence aussi longtemps qu'une telle protection n'est pas en contradiction avec la Première et/ou la Deuxième Loi.
                     </ListGroup.Item>
-                    <ListGroup.Item style={{backgroundColor: 'transparent'}}>
-                        <h6>Loi zéro</h6>
+                    <ListGroup.Item style={{backgroundColor: 'transparent', textAlign: 'justify'}}>
+                        <h6 style={{textAlign: 'left'}}>Loi zéro</h6>
                         Un robot ne peut nuire à l’humanité ni laisser sans assistance l’humanité en danger.
                     </ListGroup.Item>
                 </ListGroup>
