@@ -73,16 +73,17 @@ L'interface en développement à légerement changée pour afficher différentes
 Les choix s'effectuant ainsi en cliquant sur des boutons de choix en dessous de chaque question.
 
 Interface de creation de robot et de parametrage d'une partie :
-![alt text](./ressources_readme/interface_connexion.png)
+![Interface de creation de robot](./ressources_readme/interface_connexion.png)
 
 Interface de jeu :
-![alt text](./ressources_readme/interface_jeu.png)
+![Interface de jeu](./ressources_readme/interface_jeu.png)
 
 Interface de jeu avec affichage du volet des lois d'Asimov :
-![alt text](./ressources_readme/affichage_volet_lois.png)
+![volet des lois d'Asimov](./ressources_readme/affichage_volet_lois.png)
 
 ### MCD
 Modele de donneés du jeu
+![MCD](./ressources_readme/uml_t4_image.png)
 
 
 ## Utilisation de l'app web
