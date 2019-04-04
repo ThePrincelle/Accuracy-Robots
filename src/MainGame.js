@@ -47,36 +47,35 @@ export default class Game extends Component {
      * Fin de la partie avec victoire
      */
     endGame = () => {
-        return (
-            <Modal.Dialog>
-            <Modal.Header closeButton>
-                <Modal.Title>Fin de la partie</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <p>Vous avez gagné ! Félicitations !</p>
-            </Modal.Body>
-            </Modal.Dialog>
-        )
+        return this.finPartieModal("Vous avez gagné ! Félicitations !");
     }
 
     /**
      * Fin de la partie défaite
      */
     gameOver = () => {
+        return this.finPartieModal("Vous avez perdu. Votre robot s'est auto-détruit !");
+    }
+
+    goTo = (link) => {
+        document.location.href = link
+    }
+
+    finPartieModal = (text) => {
         return (
             <Modal.Dialog>
-            <Modal.Header closeButton>
+            <Modal.Header>
                 <Modal.Title>Fin de la partie</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <p>Vous avez perdu. Votre robot s'est auto-détruit !</p>
+                {text}
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary">Close</Button>
-                <Button variant="primary">Save changes</Button>
+                <Button style={{ margin: "0px", marginRight: "5px"}} size="sm" block variant="danger">Quitter</Button>
+                <Button style={{ margin: "0px" }} size="sm" block variant="info">Rejouer</Button>
             </Modal.Footer>
             </Modal.Dialog>
-        )
+        );
     }
 
     /**
@@ -173,10 +172,10 @@ export default class Game extends Component {
 
                 </Card.Body>
             </Card>
+
+            <Law/>
+
             {main}
-            
-            
-            <Law sidebarOpen='false'></Law>
             </>
         )
     }
