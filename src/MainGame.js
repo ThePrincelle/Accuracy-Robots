@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import JsonData from './data/questions2.json'
+import JsonData from './data/tableaux.json'
 import Question from './components/QuestionComponent';
 import Answer from './components/AnswerComponent';
-import { Card, ProgressBar } from 'react-bootstrap';
+import Law from './components/law';
+import { Card, ProgressBar, Modal, Button} from 'react-bootstrap';
+import imgRobot from './images/robot.png';
+
 
 export default class Game extends Component {
     state = {
         nbTours: 10,
-        tourAct: 0,
+        tourAct: 1,
         questions: [],
-        currentQuestion: 0,
+        currentQuestion: -1,
 
         robotIntegrity: 100,
         progColor: "success",
@@ -20,8 +23,8 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        let rand = Math.floor(Math.random() * this.state.questions.length);
-        this.setState({currentQuestion: rand})
+        //let rand = Math.floor(Math.random() * this.state.questions.length);
+        this.setState(prevState => ({currentQuestion: prevState.currentQuestion+1}))
     }
 
     /**
@@ -39,21 +42,38 @@ export default class Game extends Component {
             this.endGame();
         }
         this.updateIntegrity(valInteg);
-        this.updateCurrentQuestion();
+        this.updateCurrentQuestion()
     }
 
     /**
      * Fin de la partie avec victoire
      */
     endGame = () => {
-        return (<h2>Fin de la partie, vous avez gagné</h2>)
+        return this.finPartieModal("Vous avez gagné ! Félicitations !");
     }
 
     /**
      * Fin de la partie défaite
      */
     gameOver = () => {
-        return (<h2>Fin de la partie : Votre robot s'est autodétruit !</h2>)
+        return this.finPartieModal("Vous avez perdu. Votre robot s'est auto-détruit !");
+    }
+
+    finPartieModal = (text) => {
+        return (
+            <Modal.Dialog>
+            <Modal.Header>
+                <Modal.Title>Fin de la partie</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                {text}
+            </Modal.Body>
+            <Modal.Footer>
+                <Button style={{ margin: "0px", marginRight: "5px"}} size="sm" block variant="danger" href="/">Quitter</Button>
+                <Button style={{ margin: "0px" }} size="sm" block variant="info" href="/game">Rejouer</Button>
+            </Modal.Footer>
+            </Modal.Dialog>
+        );
     }
 
     /**
@@ -88,36 +108,55 @@ export default class Game extends Component {
         })
     }
 
+    readCookie = (name) => {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
     /**
      * Récupere toutes les questiosn dans le fichier JSON et les transforme en composants Questions / Answer
      */
     componentDidMount()
     {
+        this.setState({
+            nbTours: this.readCookie("tours"),
+            robotName: this.readCookie("name") || "The Robot"
+        });
+        
         JsonData.map((a) => {
             //réponses pour une question
             let reponses = a.reponses 
             //tableau de composants Answer
             let repComp = [];
             reponses.map((r) => {
-                return repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
+                repComp.push(<Answer callbackToParent={this.nextTour} text={r.rep} value={r.value}/>)
+                return r;
             })
             let question = <Question text={a.question} answers={repComp}/>
             this.setState((prevState) => ({
                 questions: [...prevState.questions, question]
             }))
-            return 0;
+
+            return question;
         })
-        this.nextTour(0)
+
+        this.updateCurrentQuestion()
     }
 
     render()
     {
         let main;
+        console.log(this.state.questions)
+        console.log("tour : " +this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
 
-        console.log(this.state.currentQuestion)
-        console.log(this.state.tourAct + "/" + this.state.nbTours + " integrite : " + this.state.robotIntegrity)
-
-        if(this.state.tourAct === this.state.nbTours && this.state.robotIntegrity > 0) 
+        // eslint-disable-next-line eqeqeq
+        if(this.state.tourAct == this.state.nbTours && this.state.robotIntegrity > 0) 
         {
             main = this.endGame()
         }
@@ -127,12 +166,18 @@ export default class Game extends Component {
         }
         else
         {
+            console.log(this.state.questions[this.state.currentQuestion])
+            console.log(this.state.currentQuestion)
             main = this.state.questions[this.state.currentQuestion];
         }
 
-        console.log(this.state.questions)
+        console.log(main)
+
+        console.log("curr question : " + this.state.currentQuestion)
+
         return (
             <>
+            <img src={imgRobot} alt="Robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
                     Tour : {this.state.tourAct} / {this.state.nbTours}
@@ -147,11 +192,12 @@ export default class Game extends Component {
                         label={<b>{this.state.robotIntegrity}%</b>} 
                         style={{ marginTop: '1em', height: "2em" }} 
                     />
-
                 </Card.Body>
             </Card>
+            <Law/>
 
-            {main}
+            <div>{main}</div>
+            
             </>
         )
     }
