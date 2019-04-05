@@ -55,7 +55,7 @@ Par la suite, les différentes étapes seront :
 * Passage à la situation suivante  
 * Paramétrage d’une partie  
 * Nombre de tours : nombre de tours de jeu (chaque tour correspondant à une situation)  
-Nom du robot
+* Nom du robot
 
 ## Partie conception  🖥
 
@@ -96,9 +96,28 @@ Modèle de données du jeu
 ### Installation en local
 L'application tourne sous ReactJS, pour lancer l'application en local sur vote PC vous pouvez vous référer au [README de ReactJS](./README_BOOTSTRAP.md).
 
+Voici un résumé de l'installation : 
+
+Pour commencer, installez la version LTS de NodeJS sur votre machine.
+[Page de téléchargement NodeJS](https://nodejs.org/fr/)
+
+Par la suite, clonez ce dépôt Git sur votre machine :
+```git clone https://git.unistra.fr/teyermann/t4-2019.git```
+
+Insérez vos identifiants Unistra si demandé.
+
+En restant dans un terminal ou invite de commande, suivez les étapes suivantes :
+
+Ensuite, entrez dans le dossier du Git, et installez les dépendances du site : 
+```npm install```
+
+Une fois les dépendances installées, lancez le serveur avec la commande : ```npm start```
+
+Normalement votre navigateur favori devrait se lancer tout seul, si ce n'est pas le cas, vous pouvez toujours ouvrir sur votre navigateur la page par défaut : [localhost:3000](http://localhost:3000).
+
 ### Utilisation de l'app hébergée
 L'application est aussi hébergée sur un serveur web pour éviter d'avoir à l'installer.  
-[Lien de l'application](https://accuracyrobots.princelle.org)
+[Lien vers l'application](https://accuracyrobots.princelle.org)
 
 # Support
 Si vous rencontrez le moindre problème, n'hésitez pas à contacter Maxime Princelle [ici](https://contact.princelle.org).
