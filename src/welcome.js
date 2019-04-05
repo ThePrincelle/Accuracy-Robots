@@ -20,20 +20,15 @@ class Welcome extends Component{
     }
 
     validateName = (props) => {
-        // eslint-disable-next-line
-        var newRobot = {
-            name: this.state.name,
-            round: this.state.round
-        };
-
         props.target.value = "";
     }
 
     changeRound = (e) => {
+        let tours = e.target.value;
         this.setState({
-            round: e.target.value
+            round: tours
         });
-        console.log(this.state.round);
+        console.log("Nb de tours : " + tours);
     }
 
     playGame = (e) => {
@@ -48,6 +43,12 @@ class Welcome extends Component{
             <>
             <div className="welcome">
                 <h1 className="welcomeTitle">Accuracy Robots</h1>
+
+                <p style={{paddingBottom:"2em", textAlign: "justify-center"}}>
+                    L’ histoire se déroule en l’an 5347 après la colonisation de Mars. Celle-ci est devenue une planète où les robots et les humains vivent en parfaite harmonie.
+                    <br/><br/>
+                    Vous jouez l'un de ces robots. <br/>Pour rester en vie, vous devrez faire attention à garder un certain niveau d'intégrité afin d'éviter l'auto-destruction.
+                </p>
                 
                 <Form.Group controlId="form">
                     <Form.Label>Nom du robot</Form.Label>
