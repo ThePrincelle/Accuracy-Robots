@@ -25,6 +25,11 @@ class Welcome extends Component{
 
     changeRound = (e) => {
         let tours = e.target.value;
+        if(tours < 5){
+            tours = 5
+        } else if (tours > 10){
+            tours = 10
+        }
         this.setState({
             round: tours
         });
@@ -49,8 +54,7 @@ class Welcome extends Component{
                     <br/><br/>
                     Vous jouez l'un de ces robots. 
                     <br/>Pour rester en vie, faites attention à garder un niveau d'intégrité raisonable, afin d'éviter l'auto-destruction.
-                    Vous serez confrontés à des situations, chaqu'une d'entre-elles mettant en pratique les lois d'Asimov, que vous devrez respecter.
-                    
+                    Vous serez confrontés à des situations, chacune d'entre-elles mettant en pratique les lois d'Asimov, que vous devrez respecter.
                 </p>
                 
                 <Form.Group controlId="form">
