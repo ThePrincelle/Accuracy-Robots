@@ -103,7 +103,7 @@
     },
     {
         "id": 7,
-        "question": "Vous voyez une dame qui se voler dans la rue, allez vous l'aider ?",
+        "question": "Vous voyez une dame qui se fait voler dans la rue, allez vous l'aider ?",
         "reponses": [{
                 "rep": "Je pars à la poursuite des voleurs",
                 "value": 20
