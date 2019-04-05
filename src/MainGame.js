@@ -23,13 +23,13 @@ export default class Game extends Component {
      * Met a jour la question actuelle
      */
     updateCurrentQuestion = () => {
-        this.removePeople(this.state.questions, this.state.currentQuestion);
+        this.removeQuestion(this.state.questions, this.state.currentQuestion);
 
         let rand = Math.floor(Math.random() * this.state.questions.length);
         this.setState(prevState => ({currentQuestion: rand}));
     }
 
-    removePeople(array, index) {
+    removeQuestion(array, index) {
         if(index > -1){
             array.splice(index,1);
         }
