@@ -1,4 +1,4 @@
-# Projet T4 : Accuracy Robots
+# Projet T4 : Accuracy Robots  🤖
 
 **Membres du projet** : 
  - Thomas Eyermann
@@ -6,17 +6,18 @@
  - Quentin Schaeffer ([Infos](https://quentinschaeffer.fr))
  - Jean-Thavorak Phe ([Infos](https://www.linkedin.com/in/jean-thavorak-phe-a648b1174/))
 
-**Lien vers le prototype de l'application** : [accuracyrobots.princelle.org](https://accuracyrobots.princelle.org)
+**Lien vers le prototype de l'application** : [accuracyrobots.princelle.org](https://accuracyrobots.princelle.org)  
+**Lien vers le cahier des charges fonctionnel** : [Accuracy Robots CDCF](https://docs.google.com/document/d/16tri5rYo8iuTnbidY36FoNQXZASV9LYmXdTJKN8FSlw/edit?usp=sharing)
 
-## Partie théorique
+## Partie théorique  🗣
 
-### Objectif pédagogique général
+### Objectif pédagogique général  📍
 
 Mettre en oeuvre les lois d’Asimov au travers d’un jeu de choix.
 Les choix que le joueur va prendre prendre lors du jeu, pourront parfois l'amener à un paradoxe mais cela va également lui permettre de faire comprendre la difficulté que représente le fait de créer des lois pour encadrer l’IA.
 
 
-### Description du jeu
+### Description du jeu  📃
 **Type de jeu** :  Décisionnel - choix tour par tour   
 **Incarnation du joueur** : Le joueur incarne un robot  
 
@@ -44,7 +45,7 @@ Le test est le suivant : vous devrez faire des choix en fonction de différentes
 Attention, un robot ne peut enfreindre aucune loi d’Asimov, s’il les enfreint son bon fonctionnement sera compromis et finira par s'autodétruire pour ne pas mettre en danger la race humaine...
 
 
-### Déroulement d’une partie
+### Déroulement d’une partie  🕹
 Le joueur commence par choisir son robot (qu’il pourra personnaliser par la suite).  
 
 Par la suite, les différentes étapes seront :
@@ -56,9 +57,9 @@ Par la suite, les différentes étapes seront :
 * Nombre de tours : nombre de tours de jeu (chaque tour correspondant à une situation)  
 Nom du robot
 
-## Partie conception
+## Partie conception  🖥
 
-### Interface schématisée du jeu
+### Interface schématisée du jeu  
 
 Avant la conception même du jeu nous avons décidé de schématiser l'interface pour savoir à quoi allait ressembler ce dernier.
 
@@ -90,7 +91,7 @@ Modèle de données du jeu
 ![MCD](./ressources_readme/uml_t4_image.png)
 
 
-## Utilisation de l'app web
+## Utilisation de l'app web  🌐
 
 ### Installation en local
 L'application tourne sous ReactJS, pour lancer l'application en local sur vote PC vous pouvez vous référer au [README de ReactJS](./README_BOOTSTRAP.md).
