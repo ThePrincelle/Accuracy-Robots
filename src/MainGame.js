@@ -213,7 +213,6 @@ export default class Game extends Component {
             <Law/> 
 
             <div>{main}</div>
-            <Button size="sm" style={{ marginRight: '20px', marginBottom: '20px', position: 'absolute', right: '0', bottom: '0' }} href="/about">Crédits</Button>
             </>
         )
     }
