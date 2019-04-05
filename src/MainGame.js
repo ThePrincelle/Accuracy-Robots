@@ -193,7 +193,7 @@ export default class Game extends Component {
 
         return (
             <>
-            <img src={imgRobot} alt="Robot" style={{position: "absolute", top: "0", marginLeft: "30em"}}/>
+            <img src={imgRobot} alt="Robot" style={{position: "absolute", marginLeft: "35em", bottom: "0px"}}/>
             <Card style={{ width: '20rem', marginBottom: "1em" }}>
                 <Card.Header as="h4">
                     Tour : {this.state.tourAct} / {this.state.nbTours}
