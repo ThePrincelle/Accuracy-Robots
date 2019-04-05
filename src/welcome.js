@@ -53,7 +53,7 @@ class Welcome extends Component{
                     L’ histoire se déroule en l’an 5347 après la colonisation de Mars. Celle-ci est devenue une planète où les robots et les humains vivent en parfaite harmonie.
                     <br/><br/>
                     Vous jouez l'un de ces robots. 
-                    <br/>Pour rester en vie, faites attention à garder un niveau d'intégrité raisonable, afin d'éviter l'auto-destruction.
+                    <br/>Pour rester en vie, faites attention à garder un niveau d'intégrité raisonnable, afin d'éviter l'auto-destruction.
                     Vous serez confrontés à des situations, chacune d'entre-elles mettant en pratique les lois d'Asimov, que vous devrez respecter.
                 </p>
                 
