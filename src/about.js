@@ -9,9 +9,9 @@ export default class About extends Component {
             <Button size="sm" variant="danger" href="/">Retour à l'accueil</Button>
             <h1 style={{ textAlign: "center", color: "white" }}>Crédits</h1>
             <div style={{padding:70, paddingTop: 30}}>
-            <Row>
-                <Col>
-                    <Card className="cardMember" style={{width: 250}}>
+            <Row style={{justifyContent: "center"}}>
+                <Col sm>
+                    <Card className="cardMember" style={{marginLeft: "auto", marginRight: "auto", width: 250}}>
                     <Card.Img variant="top" src="/images/jean_phe.jpg" />
                     <Card.Body>
                         <Card.Title>Jean Phé</Card.Title>
@@ -23,8 +23,8 @@ export default class About extends Component {
                     </Card>;
                 </Col>
 
-                <Col>
-                    <Card className="cardMember" style={{width: 250}}>
+                <Col sm>
+                    <Card className="cardMember" style={{marginLeft: "auto", marginRight: "auto", width: 250}}>
                     <Card.Img variant="top" src="/images/eyermann.png" />
                     <Card.Body>
                         <Card.Title>Thomas Eyermann</Card.Title>
@@ -34,8 +34,8 @@ export default class About extends Component {
                     </Card.Body>
                     </Card>;
                 </Col>
-                <Col>
-                    <Card className="cardMember" style={{width: 250}}>
+                <Col sm>
+                    <Card className="cardMember" style={{marginLeft: "auto", marginRight: "auto", width: 250}}>
                     <Card.Img variant="top" src="/images/quentin.png" style={{height:250, width : 250}}/>
                     <Card.Body>
                         <Card.Title>Quentin Schaeffer</Card.Title>
@@ -46,8 +46,8 @@ export default class About extends Component {
                     </Card.Body>
                     </Card>;
                 </Col>
-                <Col>
-                    <Card className="cardMember" style={{width: 250}}>
+                <Col sm>
+                    <Card className="cardMember" style={{marginLeft: "auto", marginRight: "auto", width: 250}}>
                     <Card.Img variant="top" src="/images/maxime.jpg" />
                     <Card.Body>
                         <Card.Title>Maxime Princelle</Card.Title>

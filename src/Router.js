@@ -16,6 +16,7 @@ function Main() {
 function about(){
   return (<About/>)
 }
+
 function AppRouter() {
   return (
     <Router>
