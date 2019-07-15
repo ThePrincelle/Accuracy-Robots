@@ -106,8 +106,7 @@ Par la suite, clonez ce dépôt Git sur votre machine :
 
 Insérez vos identifiants Unistra si demandé.
 
-Si vous obtenez une erreur, merci d'essayer la commande suivante :
-```git clone https://github.com/ThePrinceMax/Accuracy-Robots.git```
+Si vous obtenez une erreur, merci d'essayer la commande suivante :<br>```git clone https://github.com/ThePrinceMax/Accuracy-Robots.git```
 
 En restant dans un terminal ou invite de commande, suivez les étapes suivantes :
 
