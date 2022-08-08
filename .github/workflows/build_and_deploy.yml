@@ -43,10 +43,19 @@ jobs:
       with:
         name: production-files
         path: ./build
+        
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
 
-    - name: Deploy with gh-pages
-      run: |
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+    - name: Prepare for gh-pages
+      run: npx gh-pages -d . -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
