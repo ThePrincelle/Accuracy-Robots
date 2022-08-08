@@ -1,4 +1,4 @@
-name: Build & deploy
+name: Build & Deploy
 
 on:
   push:
@@ -24,13 +24,6 @@ jobs:
     
     - name: Build project
       run: npm run build
-      
-    - name: Prepare for gh-pages
-      run: |
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
